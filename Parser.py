@@ -9,10 +9,12 @@ def parser(url):
     song_title = tree.xpath('/html/body/div[7]/h1/text()')
     text_original = tree.xpath('//*[@id="click_area"]/div//*[@class="original"]/text()')
     text_translate = tree.xpath('//*[@id="click_area"]/div//*[@class="translate"]/text()')
-    print(song_title)
-    for i in range(len(text_original)):
-        print(text_original[i], text_translate[i])
 
+    with open('translate.csv', 'w', newline='') as csv_file:
+        write = csv.writer(csv_file)
+        for i in range(len(text_original)):
+            write.writerow(text_original[i])
+            write.writerow(text_translate[i])
 
 def main():
     parser('https://www.amalgama-lab.com/songs/j/johnny_cash/hurt.html')
