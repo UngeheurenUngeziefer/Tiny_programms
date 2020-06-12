@@ -1,6 +1,6 @@
 # Tiny_programms
-1. Крестики-нолики в консоли</br>
-2. Программа считающая зарплату</br>
-3. Парсер переводов с amalgama-lab</br>
+1. Tic Tac Toe</br>
+2. Salary</br>
+3. Parsing translations from amalgama-lab</br>
 4. Purge log</br>
 5. Old files and empty folders killer
